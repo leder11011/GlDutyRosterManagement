@@ -1,0 +1,184 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.leder11011.main.Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_971480264 { 
+   	label=leder11011
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1006373592 { 
+   	label=logic
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   FileHandler1581731570[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ readDutiesFromCsvFile(): List&lt;DutyRosterEntry&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readEmployeesFromCsvFile(): List&lt;Employee&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeDutiesToCsvFile(dutiesList: List&lt;DutyRosterEntry&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeEmployeesToCsvFile(employeeList: List&lt;Employee&gt;)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1695015249 { 
+   	label=main
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Main1297965989[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1878856438 { 
+   	label=ui
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   UiController1178536064[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)UiController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- createDuty()</TD></TR>
+<TR><TD ALIGN="LEFT" >- deleteDuty()</TD></TR>
+<TR><TD ALIGN="LEFT" >- handleMainMenuUserInteraction()</TD></TR>
+<TR><TD ALIGN="LEFT" >- initializeDuties()</TD></TR>
+<TR><TD ALIGN="LEFT" >- initializeEmployees()</TD></TR>
+<TR><TD ALIGN="LEFT" >- printAppHeader()</TD></TR>
+<TR><TD ALIGN="LEFT" >- printMainMenu()</TD></TR>
+<TR><TD ALIGN="LEFT" >- saveDutiesAndEmployees()</TD></TR>
+<TR><TD ALIGN="LEFT" >- showAllDuties()</TD></TR>
+<TR><TD ALIGN="LEFT" >- showDutiesBeforeToday()</TD></TR>
+<TR><TD ALIGN="LEFT" >- showDutiesTodayAndLater()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ startApp()</TD></TR>
+<TR><TD ALIGN="LEFT" >- updateDuty()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+UiInputHelper1178536064[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)UiInputHelper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># getEmployee(employeeNumber: String): Employee</TD></TR>
+<TR><TD ALIGN="LEFT" ># getValidDutiesListIndex(message: String): int</TD></TR>
+<TR><TD ALIGN="LEFT" ># getValidEmployee(employeeNumber: String): Employee</TD></TR>
+<TR><TD ALIGN="LEFT" ># getValidVehicle(resource: Resource): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Main1297965989 -> UiController1178536064[label="main() -> startApp()"];
+    
+}
+@enduml

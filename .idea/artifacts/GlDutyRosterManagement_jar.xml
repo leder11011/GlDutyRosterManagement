@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GlDutyRosterManagement:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GlDutyRosterManagement_jar</output-path>
+    <root id="archive" name="GlDutyRosterManagement.jar">
+      <element id="module-output" name="GlDutyRosterManagement" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Java/lib/ConsoleReaderLib.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
