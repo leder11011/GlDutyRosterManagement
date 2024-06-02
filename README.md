@@ -12,4 +12,11 @@ Please use IntelliJ IDEA to run and build.
 - `cd out/artifacts/GlDutyRosterManagement_jar`
 - `cp ../../../lib . -R`
 - `mkdir resources`
+- `gedit resources/employees.csv`
+```
+Surname1,Christianname1
+Surname2,Christianname2
+Surname3,Christianname3
+```
+
 - `java -jar GlDutyRosterManagement.jar`
