@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ConsoleReaderLib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ConsoleReaderLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/ConsoleReaderLib.jar!/" />
+    </SOURCES>
+  </library>
+</component>
