@@ -1,7 +1,7 @@
 # GlDutyRosterManagement
 
 
-Please use openjdk-17 or above.
+Please use openjdk-21 or above.
 Please use IntelliJ IDEA to run and build.
 
 ## TODO:
